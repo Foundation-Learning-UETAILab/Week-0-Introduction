@@ -12,7 +12,7 @@ assignees: ''
 
 ### Example (Optional)
 
-<!-- A simple example or demonstration describe the following question. -->
+<!-- A simple example or demonstration describes the following question. -->
 
 ### Additional context
 
