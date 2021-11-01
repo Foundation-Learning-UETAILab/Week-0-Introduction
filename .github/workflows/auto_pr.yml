@@ -1,0 +1,22 @@
+name: Submit by PR
+on:
+  push:
+    branches: [main]
+
+jobs:
+  create-PR:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: Submission
+          title: '[Submission] ${{ github.actor }} '
+          labels: submission, automated pr
+          assignees: ${{ github.actor }}
+          branch: ${{ github.actor }}_submission
+          body: >
+            Assignment submission by ${{ github.actor }}
