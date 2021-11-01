@@ -22,11 +22,13 @@ def add(x, y):
 
 def neg(x):
     """:math:`f(x) = -x`"""
-    # TODO: Implement for Task 0.1.
+    return -x
     raise NotImplementedError('Need to implement for operator `neg` in Task 0.1')
 
 
 def max(x, y):
     """:math:`f(x) =` x if x is greater than y else y"""
-    # TODO: Implement for Task 0.1.
+    if x > y:
+        return x
+    return y
     raise NotImplementedError('Need to implement for operator `max` in Task 0.1')
