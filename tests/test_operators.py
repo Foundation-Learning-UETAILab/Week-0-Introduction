@@ -16,4 +16,7 @@ def test_same_as_python(x, y):
     assert mul(x, y) == x * y
     assert add(x, y) == x + y
     assert neg(x) == -x
-    assert max(x, y) == x if x > y else y
+    if x > y:
+        assert max(x, y) == x
+    else:
+        assert max(x, y) == y
