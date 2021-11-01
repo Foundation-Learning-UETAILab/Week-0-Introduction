@@ -1,0 +1,6 @@
+# base ===========
+torch>=1.6
+hypothesis >= 4.38
+
+# setup & docs ===
+setuptools>=52.0.0
