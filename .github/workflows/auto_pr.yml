@@ -8,14 +8,14 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          ref: ${{ github.ref }}
+          ref: main
 
       - name: Reset current branch
         run: |
-          git fetch origin main:main
-          git reset --hard main
+          git fetch origin ${{ github.ref }}:${{ github.ref }}
+          git reset --hard ${{ github.ref }}
 
-      - name: Create Pull Request
+      - name: Create Pull Requestf
         uses: peter-evans/create-pull-request@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -23,6 +23,6 @@ jobs:
           title: '[Submission] ${{ github.actor }} '
           labels: submission, automated pr
           assignees: ${{ github.actor }}
-#          branch: ${{ github.ref }}
+          branch: submit/${{ github.actor }}
           body: >
             Assignment submission by ${{ github.actor }}
