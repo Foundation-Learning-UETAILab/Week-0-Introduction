@@ -11,7 +11,7 @@ import math
 def mul(x, y):
     """:math:`f(x, y) = x * y`"""
     # TODO: Implement for Task 0.1.
-    return x*y
+    # return x*y
     raise NotImplementedError('Need to implement for operator `mul` in Task 0.1')
 
 
