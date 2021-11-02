@@ -1,7 +1,6 @@
 name: Submit by PR
 on:
-  create:
-    - branch
+  - create
 
 jobs:
   create-PR:
@@ -9,7 +8,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          ref: main
+          token: ${{ secrets.PAT }}
+          repository: Foundation-Learning-UETAILab/Week-0-Introduction
 
       - name: Reset current branch
         run: |
@@ -19,7 +19,7 @@ jobs:
       - name: Create Pull Requestf
         uses: peter-evans/create-pull-request@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PAT }}
           commit-message: Submission
           title: '[Submission] ${{ github.actor }} '
           labels: submission, automated pr
