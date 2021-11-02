@@ -23,6 +23,6 @@ jobs:
           title: '[Submission] ${{ github.actor }} '
           labels: submission, automated pr
           assignees: ${{ github.actor }}
-          branch: submit/${{ github.actor }}
+          branch: ${{ github.ref }}
           body: >
             Assignment submission by ${{ github.actor }}
