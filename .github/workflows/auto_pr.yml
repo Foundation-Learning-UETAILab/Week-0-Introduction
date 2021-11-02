@@ -1,15 +1,22 @@
 name: Submit by PR
 on:
-  push:
-    branches: [main]
+  create:
+    - branch
 
 jobs:
   create-PR:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          ref: main
 
-      - name: Create Pull Request
+      - name: Reset current branch
+        run: |
+          git fetch origin ${{ github.ref }}:${{ github.ref }}
+          git reset --hard ${{ github.ref }}
+
+      - name: Create Pull Requestf
         uses: peter-evans/create-pull-request@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -17,6 +24,6 @@ jobs:
           title: '[Submission] ${{ github.actor }} '
           labels: submission, automated pr
           assignees: ${{ github.actor }}
-          branch: ${{ github.actor }}_submission
+          branch: ${{ github.ref }}
           body: >
-            Assignment submission by ${{ github.actor }}
+            📄 Assignment submission by ${{ github.actor }}
