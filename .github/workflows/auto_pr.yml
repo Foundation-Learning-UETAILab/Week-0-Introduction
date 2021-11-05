@@ -1,29 +1,28 @@
-name: Submit by PR
-on:
-  - create
+# name: Submit by PR
+# on:
+#   - create
 
-jobs:
-  create-PR:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          token: ${{ secrets.PAT }}
-          repository: Foundation-Learning-UETAILab/Week-0-Introduction
+# jobs:
+#   create-PR:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v2
+#         with:
+#           ref: main
 
-      - name: Reset current branch
-        run: |
-          git fetch origin ${{ github.ref }}:${{ github.ref }}
-          git reset --hard ${{ github.ref }}
+#       - name: Reset current branch
+#         run: |
+#           git fetch origin ${{ github.ref }}:${{ github.ref }}
+#           git reset --hard ${{ github.ref }}
 
-      - name: Create Pull Requestf
-        uses: peter-evans/create-pull-request@v3
-        with:
-          token: ${{ secrets.PAT }}
-          commit-message: Submission
-          title: '[Submission] ${{ github.actor }} '
-          labels: submission, automated pr
-          assignees: ${{ github.actor }}
-          branch: ${{ github.ref }}
-          body: >
-            📄 Assignment submission by ${{ github.actor }}
+#       - name: Create Pull Requestf
+#         uses: peter-evans/create-pull-request@v3
+#         with:
+#           token: ${{ secrets.PAT }}
+#           commit-message: Submission
+#           title: '[Submission] ${{ github.actor }} '
+#           labels: submission, automated pr
+#           assignees: ${{ github.actor }}
+#           branch: ${{ github.ref }}
+#           body: >
+#             📄 Assignment submission by ${{ github.actor }}
