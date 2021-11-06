@@ -17,11 +17,6 @@ jobs:
       with:
         python-version: 3.8
 
-    - name: Reset promotion branch
-      run: |
-        git fetch origin main:main
-        git reset --hard main
-
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
