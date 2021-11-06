@@ -9,7 +9,6 @@ from .strategies import small_floats
 import pytest
 
 
-@pytest.mark.task0_1
 @given(small_floats, small_floats)
 def test_same_as_python(x, y):
     """Check that the main operators all return the same value of the python version"""
