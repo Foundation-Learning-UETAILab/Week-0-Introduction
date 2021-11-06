@@ -11,23 +11,26 @@ import math
 def mul(x, y):
     """:math:`f(x, y) = x * y`"""
     # TODO: Implement for Task 0.1.
-    # return x*y
+    return x*y
     raise NotImplementedError('Need to implement for operator `mul` in Task 0.1')
 
 
 def add(x, y):
     """:math:`f(x, y) = x + y`"""
     # TODO: Implement for Task 0.1.
+    return x + y
     raise NotImplementedError('Need to implement for operator `add` in Task 0.1')
 
 
 def neg(x):
     """:math:`f(x) = -x`"""
     # TODO: Implement for Task 0.1.
+    return -x
     raise NotImplementedError('Need to implement for operator `neg` in Task 0.1')
 
 
 def max(x, y):
     """:math:`f(x) =` x if x is greater than y else y"""
     # TODO: Implement for Task 0.1.
+    return x if x > y else y
     raise NotImplementedError('Need to implement for operator `max` in Task 0.1')
