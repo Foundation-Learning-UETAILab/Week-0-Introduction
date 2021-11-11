@@ -1,4 +1,3 @@
-import minitorch
 from hypothesis import settings
 from hypothesis.strategies import composite, floats, integers, lists, permutations
 
