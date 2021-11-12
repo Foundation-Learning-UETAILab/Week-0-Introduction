@@ -1,28 +1,44 @@
-# flake8, black, pep8 tests
 name: Test linting
+
 on:
-  [push]
+  - push
 
 jobs:
-  run-linters:
-    name: Run linters
+  flake8-test:
+    name: flake8 test
     runs-on: ubuntu-latest
 
     steps:
     - name: Check out Git repository
       uses: actions/checkout@v2
+      
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
 
+    - name: Run flake8
+      uses: julianwachholz/flake8-action@v2
+      with:
+        checkName: "flake8 test"
+        plugins: flake8-spellcheck
+        config: .setup.cfg
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
+  pycodestyle-test:
+    name: pycodestyle (pep8) test
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out Git repository
+      uses: actions/checkout@v2
+      
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
         python-version: '3.8'
-
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-    - name: flake8 test
-      uses: py-actions/flake8@v1
-
+  
     - name: PEP8 test
       uses: quentinguidee/pep8-action@v1
       with:
