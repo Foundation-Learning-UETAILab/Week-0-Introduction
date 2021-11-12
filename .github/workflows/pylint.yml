@@ -22,7 +22,7 @@ jobs:
       with:
         checkName: "flake8 test"
         plugins: flake8-spellcheck
-        config: .setup.cfg
+        config: setup.cfg
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     
