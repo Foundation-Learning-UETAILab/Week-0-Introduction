@@ -9,24 +9,60 @@ import math
 
 
 def mul(x, y):
-    """:math:`f(x, y) = x * y`"""
-    # TODO: Implement for Task 0.1.
-    raise NotImplementedError('Need to implement for operator `mul` in Task 0.1')
+    """Implement multiply operation for 2 number
+    `f(x, y) = x * y`
+
+    Args:
+        x (float): first number
+        y (float): second number
+
+    Raises:
+        NotImplementedError: Raise when function is not implemented
+    """    
+
+    raise NotImplementedError('Need to implement for operator `mul`')
 
 
 def add(x, y):
-    """:math:`f(x, y) = x + y`"""
-    # TODO: Implement for Task 0.1.
-    raise NotImplementedError('Need to implement for operator `add` in Task 0.1')
+    """Implement adding operation for 2 number
+    `f(x, y) = x + y`
+
+    Args:
+        x (float): first number
+        y (float): second number
+
+    Raises:
+        NotImplementedError: Raise when function is not implemented
+    """    
+
+    raise NotImplementedError('Need to implement for operator `add`')
 
 
 def neg(x):
-    """:math:`f(x) = -x`"""
-    # TODO: Implement for Task 0.1.
-    raise NotImplementedError('Need to implement for operator `neg` in Task 0.1')
+    """Implement return negative version of a number
+    `f(x, y) = -x`
+
+    Args:
+        x (float): first number
+        y (float): second number
+
+    Raises:
+        NotImplementedError: Raise when function is not implemented
+    """
+
+    raise NotImplementedError('Need to implement for operator `neg`')
 
 
 def max(x, y):
-    """:math:`f(x) =` x if x is greater than y else y"""
-    # TODO: Implement for Task 0.1.
-    raise NotImplementedError('Need to implement for operator `max` in Task 0.1')
+    """Implement max operation for return the larger number of 2 number
+    `f(x, y) = x if x is greater than y else y`
+
+    Args:
+        x (float): first number
+        y (float): second number
+
+    Raises:
+        NotImplementedError: Raise when function is not implemented
+    """
+
+    raise NotImplementedError('Need to implement for operator `max`')
