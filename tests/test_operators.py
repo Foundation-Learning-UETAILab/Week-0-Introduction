@@ -10,7 +10,7 @@ from .strategies import small_floats
 
 @given(small_floats, small_floats)
 def test_operator(x, y):
-    """Check that the main operators all return the same value of the python version"""
+    """Check operator return value"""
     assert mul(x, y) == x * y
     assert add(x, y) == x + y
     assert neg(x) == -x
