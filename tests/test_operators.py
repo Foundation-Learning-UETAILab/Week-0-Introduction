@@ -1,4 +1,4 @@
-from minitorch.operators import (
+from src.operators import (
     mul,
     add,
     neg,
@@ -6,12 +6,11 @@ from minitorch.operators import (
 )
 from hypothesis import given
 from .strategies import small_floats
-import pytest
 
 
 @given(small_floats, small_floats)
-def test_same_as_python(x, y):
-    """Check that the main operators all return the same value of the python version"""
+def test_operator(x, y):
+    """Check operator return value"""
     assert mul(x, y) == x * y
     assert add(x, y) == x + y
     assert neg(x) == -x

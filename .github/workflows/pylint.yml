@@ -1,11 +1,33 @@
-# flake8, black, pep8 tests
 name: Test linting
+
 on:
-  [push]
+  - push
 
 jobs:
-  run-linters:
-    name: Run linters
+  flake8-test:
+    name: flake8 test
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out Git repository
+      uses: actions/checkout@v2
+      
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+
+    - name: Run flake8
+      uses: julianwachholz/flake8-action@v2
+      with:
+        checkName: "flake8 test"
+        plugins: flake8-spellcheck
+        config: setup.cfg
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
+  pycodestyle-test:
+    name: pycodestyle (pep8) test
     runs-on: ubuntu-latest
 
     steps:
@@ -16,18 +38,7 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: '3.8'
-        
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install flake8 
-        
-    - name: flake8 test
-      run: |
-        # stop the build if there are Python syntax errors or undefined names
-        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
-        flake8 . --count --exit-zero --max-complexity=10 --statistics
+  
     - name: PEP8 test
       uses: quentinguidee/pep8-action@v1
       with:
