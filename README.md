@@ -35,13 +35,22 @@ This courses will prepare for you from foundamental knowledge such as probabilit
 <details close>
 <Summary>Teaching Assistants</Summary>
 
+**Nguyen Van Phi**
+    
+📧: [phinv@vnu.edu.vn](mailto:phinv@vnu.edu.vn)
+
+:octocat: Github: [gungui98](https://github.com/gungui98)
 
 **Nguyen Manh Dung**
+
 📧: [manhdung20112000@gmail.com](mailto:manhdung20112000@gmail.com)
+
 :octocat: Github: [manhdung20112000](https://github.com/manhdung20112000)
 
 **Nguyen Phuc Hai**
+
 📧: [hainguyen29031412@gmail.com](mailto:hainguyen29031412@gmail.com)
+
 :octocat: Github: [HaiNguyen2903](https://github.com/hainguyen2903)
 
 </details>
