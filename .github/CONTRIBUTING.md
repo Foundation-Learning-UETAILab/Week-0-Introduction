@@ -1,16 +1,16 @@
 # Contributing
 
-In this project, in order to provide a experimence of contributing to a real open-source project, we try to structure each assignment. Therefore, every contribution to this course must meet the requirements.
+In this project, to provide an experience of contributing to a real open-source project, we try to structure each assignment. Therefore, every contribution to this course must meet the requirements.
 
-This contributing guide will express our expectation in your code.
+This contributing guide will express our expectations in your code.
 
 ---
 
 ## Style
 
-When contributing your code, it is required to keep it organized and clean in order to make it easier to make it easier to debug, optimize, and document. To help with this process, we utilize required formatting on all assignments .
+When contributing your code, it is required to keep it organized and clean to make it easier to debug, optimize, and document. To help with this process, we utilize the required formatting on all assignments.
 
-Coding style will need to be checked as part of the continuous integration of the project. You can do so by running the `flake8` and `pycodestyle` (pep8) linter in your home directory:
+The coding style will need to be checked as part of the continuous integration of the project. You can do so by running the `flake8` and `pycodestyle` (pep8) linter in your home directory:
 
 ```bash
 flake8
@@ -72,7 +72,7 @@ The project also requires that you keep documentation up-to-standard throughout.
 
 ### Continuous Integration (CI)
 
-In addition to local testing, the project is set up such that on each code push, tests are automatically run and checked on the server. You are able to see how well you are doing on the assignment by committing your code, pushing to the server, and then logging in to GitHub. This process takes several minutes, but it is an easy way to keep track of your progress as you go.
+In addition to local testing, the project is set up such that on each code push, tests are automatically run and checked on the server. You are able to see how well you are doing on the assignment by committing your code, pushing it to the server, and then logging in to GitHub. This process takes several minutes, but it is an easy way to keep track of your progress as you go.
 
 Specifically, you can run:
 
