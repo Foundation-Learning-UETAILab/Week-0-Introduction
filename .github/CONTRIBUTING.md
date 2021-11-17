@@ -40,6 +40,11 @@ In addition to running a full task which runs all of the tests, you can run test
 pytest tests/test_operators.py
 ```
 
+You can even run only the specific test:
+```bash
+pytest -v -m operators
+```
+
 Pytest will hide all print statements unless a test fails.
 
 ---
