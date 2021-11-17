@@ -20,7 +20,7 @@ def mul(x, y):
         NotImplementedError: Raise when function is not implemented
     """    
 
-    raise NotImplementedError('Need to implement for operator `mul`')
+    raise NotImplementedError('Need to implement for Task 0.1')
 
 
 def add(x, y):
@@ -35,7 +35,7 @@ def add(x, y):
         NotImplementedError: Raise when function is not implemented
     """    
 
-    raise NotImplementedError('Need to implement for operator `add`')
+    raise NotImplementedError('Need to implement for Task 0.1')
 
 
 def neg(x):
@@ -50,7 +50,7 @@ def neg(x):
         NotImplementedError: Raise when function is not implemented
     """
 
-    raise NotImplementedError('Need to implement for operator `neg`')
+    raise NotImplementedError('Need to implement for Task 0.1')
 
 
 def max(x, y):
@@ -65,4 +65,4 @@ def max(x, y):
         NotImplementedError: Raise when function is not implemented
     """
 
-    raise NotImplementedError('Need to implement for operator `max`')
+    raise NotImplementedError('Need to implement for Task 0.1')

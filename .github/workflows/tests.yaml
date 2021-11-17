@@ -1,4 +1,4 @@
-name: Submit test
+name: Test
 
 on:
   - pull_request
@@ -26,5 +26,12 @@ jobs:
 
     - name: Run tests
       run: |
-        pip install pytest
-        pytest tests
+        pytest tests --junitxml=test-report.xml
+      continue-on-error: true
+    
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      if: success() || failure()
+      with:
+        name: test-results
+        path: test-report.xml
