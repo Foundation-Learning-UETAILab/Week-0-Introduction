@@ -1,7 +1,7 @@
 name: Submit test
 
 on:
-  - push
+  - pull_request
 
 jobs:
   submit-test:
@@ -36,3 +36,4 @@ jobs:
       with:
         name: test-results
         path: ./jest-junit.xml
+        reporter: jest-junit
