@@ -1,4 +1,4 @@
-name: Submit test
+name: Test
 
 on:
   - pull_request
@@ -26,17 +26,10 @@ jobs:
 
     - name: Run tests
       run: |
-        pip install pytest 
-        # pytest-json-report
-        # pytest tests --json-report
-        pytest tests --junitxml=./junit.xml
+        pytest tests --junitxml=test-report.xml
       continue-on-error: true
-
-    - name: Test report
-      uses: dorny/test-reporter@v1
+      uses: actions/upload-artifact@v2
       if: success() || failure()
       with:
         name: test-results
-        # path: .report.json
-        path: ./junit.xml
-        reporter: java-junit
+        path: test-report.xml
