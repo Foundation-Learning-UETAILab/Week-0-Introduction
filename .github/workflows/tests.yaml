@@ -1,7 +1,7 @@
 name: Submit test
 
 on:
-  - pull_request
+  - push
 
 jobs:
   submit-test:
