@@ -10,7 +10,7 @@ from hypothesis import given
 from .strategies import small_floats
 
 
-@pytest.mark.operators
+# @pytest.mark.operators
 @given(small_floats, small_floats)
 def test_operators(x, y):
     """Check operator return value"""
