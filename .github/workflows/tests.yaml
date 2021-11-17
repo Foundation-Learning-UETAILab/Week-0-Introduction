@@ -29,7 +29,7 @@ jobs:
         pip install pytest pytest-json-report
         pytest tests --json-report
         # pytest tests --junitxml=./jest-junit.xml
-      # continue-on-error: true
+      continue-on-error: true
 
     - name: Test report
       uses: dorny/test-reporter@v1
@@ -38,4 +38,4 @@ jobs:
         name: test-results
         path: .report.json
         # path: ./jest-junit.xml
-        reporter: dart-json
+        reporter: flutter-json
