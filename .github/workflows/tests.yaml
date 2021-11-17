@@ -26,9 +26,10 @@ jobs:
 
     - name: Run tests
       run: |
-        pip install pytest pytest-json-report
-        pytest tests --json-report
-        # pytest tests --junitxml=./jest-junit.xml
+        pip install pytest 
+        # pytest-json-report
+        # pytest tests --json-report
+        pytest tests --junitxml=./junit.xml
       continue-on-error: true
 
     - name: Test report
@@ -36,6 +37,6 @@ jobs:
       if: success() || failure()
       with:
         name: test-results
-        path: .report.json
-        # path: ./jest-junit.xml
-        reporter: flutter-json
+        # path: .report.json
+        path: ./jest-junit.xml
+        reporter: java-junit
