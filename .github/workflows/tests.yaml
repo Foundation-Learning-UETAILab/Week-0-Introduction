@@ -38,5 +38,5 @@ jobs:
       with:
         name: test-results
         # path: .report.json
-        path: ./jest-junit.xml
+        path: ./junit.xml
         reporter: java-junit
