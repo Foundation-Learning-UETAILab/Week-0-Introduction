@@ -19,7 +19,8 @@ def mul(x, y):
     Raises:
         NotImplementedError: Raise when function is not implemented
     """    
-
+    a = x*y
+    return a
     raise NotImplementedError('Need to implement for Task 0.1')
 
 
