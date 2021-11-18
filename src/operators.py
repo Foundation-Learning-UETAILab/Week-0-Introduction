@@ -19,7 +19,7 @@ def mul(x, y):
     Raises:
         NotImplementedError: Raise when function is not implemented
     """    
-
+    return x * y
     raise NotImplementedError('Need to implement for Task 0.1')
 
 
@@ -34,7 +34,7 @@ def add(x, y):
     Raises:
         NotImplementedError: Raise when function is not implemented
     """    
-
+    return x+y
     raise NotImplementedError('Need to implement for Task 0.1')
 
 
